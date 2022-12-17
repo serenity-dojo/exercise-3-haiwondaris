@@ -24,4 +24,6 @@ public class DogClassTest {
     public void theDogClassShouldHaveAnAge() throws Exception {
         assertThat(Class.forName("com.serenitydojo.Dog").getDeclaredField("age").getGenericType()).isEqualTo(int.class);
     }
+
+
 }
