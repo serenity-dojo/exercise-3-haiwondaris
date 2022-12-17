@@ -11,4 +11,27 @@ public class WhenCreatingObjects {
         Assert.assertEquals(fido.getFavoriteToy(), "Bone");
         Assert.assertEquals(fido.getAge(), 5);
     }
+
+    @Test
+    public void testMakeNoise() {
+        Dog dog = new Dog("yellow", "toy", 3);
+        String noise = dog.makeNoise();
+        Assert.assertEquals(noise, "Woof");
+
+    }
+
+    @Test
+    public void testFed() {
+        Dog dog = new Dog("yellow", "toy", 3);
+        dog.feed();
+        Assert.assertTrue(dog.isFed());
+    }
+
+    @Test
+    public void testRefactorNoise() {
+        Dog dog = new Dog("yellow", "toy", 3);
+        String noise = dog.makeNoiseRefactor();
+        Assert.assertEquals(noise, "Woof");
+    }
+
 }

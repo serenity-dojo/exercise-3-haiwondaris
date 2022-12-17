@@ -3,8 +3,10 @@ package com.serenitydojo;
 public class Dog {
 
     private String name;
-    private String favoriteToy ;
+    private String favoriteToy;
     private int age;
+    private boolean isFed;
+    public static String DOG_NOISE = "Woof";
 
     public Dog(String name, String favoriteToy, int age) {
         this.name = name;
@@ -22,5 +24,21 @@ public class Dog {
 
     public int getAge() {
         return age;
+    }
+
+    public String makeNoise() {
+        return "Woof";
+    }
+
+    public String makeNoiseRefactor() {
+        return DOG_NOISE;
+    }
+
+    public boolean isFed() {
+        return isFed;
+    }
+
+    public void feed() {
+        isFed = true;
     }
 }
